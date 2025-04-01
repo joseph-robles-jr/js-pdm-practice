@@ -2,7 +2,7 @@ let numbers = [0, 1, 1, 8, 9, 9, 9, 8, 8, 9, 9, 1, 9, 1, 1, 9, 7, 2, 5, 3];
 
 
 function findMaxValue(arrayOfNumbers){
-    var maxValue = 0;
+    var maxValue = arrayOfNumbers[0];
     for (number of arrayOfNumbers){
         if (maxValue < number) {
             maxValue = number;
