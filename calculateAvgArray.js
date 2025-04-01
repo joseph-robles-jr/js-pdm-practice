@@ -11,4 +11,23 @@ function findAvg(numbers) {
     console.log("The average of the list is: " + average);
 }
 
-findAvg(numbers)
+
+function findAvgSimple(numbers) {
+    let sumOfArray = 0;
+    for (item of numbers) {
+        sumOfArray = sumOfArray + item; // Item is just an index, not the actual value. 
+        console.log("Item = " + item); // shows index and value. 
+    }
+    let average = sumOfArray / numbers.length;
+    console.log("The average of the list is: " + average);
+
+}
+
+
+
+
+console.log("The original way (Best for objects, not arrays)");
+findAvg(numbers);
+
+console.log("The New Way (for arrays and lists)");
+findAvgSimple(numbers);
