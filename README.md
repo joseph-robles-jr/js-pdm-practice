@@ -2,5 +2,5 @@
 
 To run a file, simply run 
 ``` 
-run_node.bat your_script.js
+node your_script.js
 ```
