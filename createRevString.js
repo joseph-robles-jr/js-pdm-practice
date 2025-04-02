@@ -29,7 +29,11 @@ function stringReverser(string) {
 function stringReverserMethods(string) {
     return string.split('').reverse().join('');  //Uses Build-in methods
 }
-console.log("Original String: \nHello World \nReversed String (Both Methods)")
-console.log(stringReverser("Hello World"));
 
-console.log(stringReverserMethods("Hello World"));
+
+let stringToReverse = 'Hello World';
+
+console.log(`Original String: \n${stringToReverse} \nReversed String (Both Methods)`);
+console.log(stringReverser(stringToReverse));
+
+console.log(stringReverserMethods(stringToReverse));
