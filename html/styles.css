@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #c2bebe;
+    /* background-color: #c2bebe; */
+    background-color: #64b9e7;
     margin: 0;
     padding: 0;
     display: flex;
@@ -44,6 +45,20 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #0056b3;
+}
+
+.nav-button {
+    border-radius: 8px;
+    background-color: #007BFF;
+    padding: 10px;
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+
+}
+.nav-button:hover {
+    background-color: #0056b3;
 }
 
 .download-link {
@@ -58,7 +73,7 @@ a:hover {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(103, 103, 103, 0.645);
     text-align: center;
 }
 
@@ -67,7 +82,7 @@ a:hover {
     padding: 40px;
     /* Increased padding for a larger box */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(103, 103, 103, 0.645);
     text-align: center;
     width: 90%;
     /* Increased width for a larger box */
