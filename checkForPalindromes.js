@@ -42,5 +42,8 @@ function isPalindrome(string) {
     return returnMe;
 }
 
+console.log(`Check One: ${panamaString}`)
 console.log(isPalindrome(panamaString));
+
+console.log(`Check Two: logs of wood`)
 console.log(isPalindrome("logs of wood"));
