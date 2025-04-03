@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c2bebe;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    text-align: center;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+
+code {
+    background-color: #eaeaea;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.download-link {
+    font-size: 0.9em;
+    color: #555;
+}
+.link-description {
+    margin-top: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.home-container {
+    background-color: #fff;
+    padding: 40px;
+    /* Increased padding for a larger box */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    /* Increased width for a larger box */
+    max-width: 1500px;
+    /* Set a maximum width */
+}
+.home-welcome {
+    line-height: 1.5em;
+    size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+    
+
+}
+
+.welcome-container{
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    padding: 20px;
+    
+}
