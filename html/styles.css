@@ -21,6 +21,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
+    height: 50px;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -35,16 +36,17 @@
 }
 
 .nav-list li {
-    margin: 0 15px;
+    margin: 15px 15px;
 }
 
 .nav-link {
     color: var(--nav-link-color);
     text-decoration: none;
     font-weight: bold;
-    padding: 5px;
+    padding: 8px;
     padding-inline: 7px;
     border-radius: 7px;
+    
 }
 
 .nav-link:hover {
@@ -54,12 +56,12 @@
     border-radius: 7px;
     color: var(--text-color);
     text-decoration: none;
-    transition: 300ms;
+    transition: 400ms;
     /* padding: 5px; */
 }
 
 body {
-    padding-top: 60px; /* Adjust this value based on the height of your header */
+     /* Adjust this value based on the height of your header */
     background-color: var(--body-background-color);
     font-family: Arial, sans-serif;
     margin: 0;
@@ -67,7 +69,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 70px;
+    padding-top: 90px;
     padding-bottom: 40px;
 }
 
