@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="articleStyles.css">
+</head>
+<body>
+    
+    <article class="articles-container">
+        <button class="nav-button" onclick="window.location.href='../index.html'">Go Home</button>
+        <h1>Functions</h1>
+        <p>Creating functions is an essential part of programming in JavaScript. 
+Functions allow you to encapsulate code into reusable blocks, making your code cleaner 
+and easier to manage.</p>
+
+        <section id="function-declaration">
+            <h2>1. Function Declaration</h2>
+            <p>A function declaration defines a named function that you can call by its 
+name later on.</p>
+            <pre><code class="javascript">
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+// Calling the function
+console(greet("Alice")); // Output: Hello, Alice!
+            </code></pre>
+        </section>
+
+        <section id="function-expression">
+            <h2>2. Function Expression</h2>
+            <p>A function expression assigns a function to a variable. You can also 
+define an anonymous function and assign it directly to a variable.</p>
+            <pre><code class="javascript">
+const greet = function(name) {
+    return "Hello, " + name + "!";
+};
+
+// Calling the function
+console.log(greet("Alice")); // Output: Hello, Alice!
+            </code></pre>
+        </section>
+
+        <section id="arrow-function">
+            <h2>3. Arrow Function</h2>
+            <p>Arrow functions provide a shorter syntax for writing functions and are 
+often used in modern JavaScript.</p>
+            <pre><code class="javascript">
+const greet = (name) => {
+    return "Hello, " + name + "!";
+};
+
+// Calling the function
+console.log(greet("Alice")); // Output: Hello, Alice!
+            </code></pre>
+        </section>
+
+        <section id="arrow-function-implicit-return">
+            <h2>4. Arrow Function with Implicit Return</h2>
+            <p>If your function has only one expression, you can omit the curly braces 
+and use an implicit return.</p>
+            <pre><code class="javascript">
+const greet = (name) => "Hello, " + name + "!";
+
+// Calling the function
+console.log(greet("Alice")); // Output: Hello, Alice!
+            </code></pre>
+        </section>
+
+        <section id="example-multiple-parameters">
+            <h2>Example with Multiple Parameters</h2>
+            <p>You can define functions with multiple parameters as well:</p>
+            <pre><code class="javascript">
+function add(a, b) {
+    return a + b;
+}
+
+// Calling the function
+console.log(add(5, 3)); // Output: 8
+            </code></pre>
+        </section>
+
+        <section id="optional-parameters">
+            <h2>Optional Parameters</h2>
+            <p>JavaScript does not have built-in support for optional parameters like 
+some other languages. However, you can handle this by providing default values.</p>
+            <pre><code class="javascript">
+function greet(name = "World") {
+    return "Hello, " + name + "!";
+}
+
+// Calling the function with and without an argument
+console.log(greet());        // Output: Hello, World!
+console.log(greet("Alice"));  // Output: Hello, Alice!
+            </code></pre>
+        </section>
+
+        <section id="function-scope">
+            <h2>Function Scope</h2>
+            <p>Variables declared inside a function are local to that function. They 
+cannot be accessed outside of it.</p>
+            <pre><code class="javascript">
+function greet(name) {
+    let message = "Hello, " + name + "!";
+    return message;
+}
+
+// Trying to access the variable outside the function will result in an error
+console.log(message); // ReferenceError: message is not defined
+            </code></pre>
+        </section>
+
+        <section id="using-functions-as-values">
+            <h2>Using Functions as Values</h2>
+            <p>Functions can be used just like any other value, passed around, and 
+assigned to variables.</p>
+            <pre><code class="javascript">
+const sayHello = greet;
+
+// Calling the function using the new variable
+console.log(sayHello("Bob")); // Output: Hello, Bob!
+            </code></pre>
+        </section>
+
+        <p>These are some basic concepts of defining and using functions in JavaScript. 
+Practice is key to becoming proficient with them!</p>
+
+        <button class="nav-button" onclick="window.location.href='../index.html'">Go Home</button>
+    </article>
+</body>
+</html>

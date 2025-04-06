@@ -32,7 +32,7 @@ li {
 }
 
 code {
-    background-color: #eaeaea;
+    background-color: #f4f4f4;
     padding: 2px 4px;
     border-radius: 4px;
 }
@@ -99,17 +99,133 @@ a:hover {
 }
 
 .welcome-container{
-    background-color: #f6f6f6;
+    background-color: #f4f4f4;
     border-radius: 8px;
     padding: 20px;
     
 }
 
 .list-container  {
-    background-color: #f6f6f6;
+    background-color: #f4f4f4;
     border-radius: 8px;
     padding: 20px;
 }
 .list-container p {
     padding-top: 10px;
+}
+
+/* General styles for the article page */
+.articles-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(103, 103, 103, 0.645);
+    text-align: left;
+    max-width: 2500px;
+    margin: 20px auto;
+}
+
+.articles-container h1 {
+    color: #333;
+    text-align: center;
+}
+
+.articles-container p {
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.articles-container h2 {
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+/* Style for pre element */
+pre {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Style for code element within pre */
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    display: block;
+    white-space: pre-wrap;
+    color: black;
+}
+
+/* Specific styles for sections */
+.articles-container section {
+    margin-bottom: 20px;
+}
+
+.articles-container section h2 {
+    margin-bottom: 10px;
+}
+
+.articles-container section p {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .articles-container, .home-container {
+        padding: 15px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p, .link-description {
+        font-size: 1em;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .list-container, .welcome-container {
+        padding: 15px;
+    }
+
+    .nav-button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    pre {
+        font-size: 0.8em;
+        padding: 10px;
+    }
 }
