@@ -1,8 +1,22 @@
-/* styles.css */
+:root {
+    --nav-background-color: #19426b;
+    --nav-link-color: #fff;
+    --nav-link-hover-color: #0056b3;
+    --body-background-color: #267098;
+    --text-color: #333;
+    --secondary-text-color: #666;
+    --link-color: #007BFF;
+    --link-hover-color: #0056b3;
+    --button-background-color: #006adb;
+    --button-hover-background-color: #0056b3;
+    --container-background-color: #fff;
+    --container-shadow-color: rgba(103, 103, 103, 0.645);
+    --pre-background-color: #f4f4f4;
+    --pre-text-color: black;
+}
 
-/* Navigation header styles */
 .nav-header {
-    background-color: #479cf7;
+    background-color: var(--nav-background-color);
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -25,28 +39,29 @@
 }
 
 .nav-link {
-    color: #fff;
+    color: var(--nav-link-color);
     text-decoration: none;
     font-weight: bold;
+    padding: 5px;
+    padding-inline: 7px;
+    border-radius: 7px;
 }
 
 .nav-link:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: var(--nav-link-hover-color);
+    background-color: var(--pre-background-color);
+    border-radius: 7px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 300ms;
+    /* padding: 5px; */
 }
 
 body {
     padding-top: 60px; /* Adjust this value based on the height of your header */
-}
-
-
-
-/* Index Styles */
-
-body {
+    background-color: var(--body-background-color);
     font-family: Arial, sans-serif;
-    /* background-color: #c2bebe; */
-    background-color: #64b9e7;
     margin: 0;
     padding: 0;
     display: flex;
@@ -57,12 +72,12 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
     text-align: center;
 }
 
 p {
-    color: #666;
+    color: var(--secondary-text-color);
     text-align: center;
     margin: 10px 0;
 }
@@ -77,94 +92,92 @@ li {
 }
 
 code {
-    background-color: #f4f4f4;
+    background-color: var(--pre-background-color);
     padding: 2px 4px;
     border-radius: 4px;
 }
 
 a {
     text-decoration: none;
-    color: #007BFF;
+    color: var(--link-color);
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: var(--link-hover-color);
 }
 
 .nav-button {
     border-radius: 8px;
-    background-color: #007BFF;
+    background-color: var(--button-background-color);
     padding: 10px;
-    color: #fff; 
+    color: var(--nav-link-color); 
     border: none;
     cursor: pointer;
-
 }
+
 .nav-button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover-background-color);
 }
 
 .download-link {
     font-size: 0.9em;
     color: #555;
 }
+
 .link-description {
     margin-top: 0;
 }
 
 .container {
-    background-color: #fff;
+    background-color: var(--container-background-color);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(103, 103, 103, 0.645);
+    box-shadow: 0 0 10px var(--container-shadow-color);
     text-align: center;
 }
 
 .home-container {
-    background-color: #fff;
+    background-color: var(--container-background-color);
     padding: 40px;
-    /* Increased padding for a larger box */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(103, 103, 103, 0.645);
+    box-shadow: 0 0 10px var(--container-shadow-color);
     text-align: center;
     width: 90%;
     height: auto;
     max-width: 1500px;
-    /* Set a maximum width */
 }
+
 .home-welcome {
     line-height: 1.5em;
     size: 1.5em;
     font-style: normal;
     font-weight: bold;
     padding-left: 20px;
-    padding-left: 20px;
 }
 
-.welcome-container{
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    padding: 20px;
-    
-}
-
-.list-container  {
-    background-color: #f4f4f4;
+.welcome-container {
+    background-color: var(--pre-background-color);
     border-radius: 8px;
     padding: 20px;
 }
+
+.list-container {
+    background-color: var(--pre-background-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
 .list-container p {
     padding-top: 10px;
 }
 
-/* General styles for the article page */
 .articles-container {
-    background-color: #fff;
+    background-color: var(--container-background-color);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(103, 103, 103, 0.645);
+    box-shadow: 0 0 10px var(--container-shadow-color);
     text-align: left;
     width: 90%;
     height: auto;
@@ -172,26 +185,25 @@ a:hover {
 }
 
 .articles-container h1 {
-    color: #333;
+    color: var(--text-color);
     text-align: center;
 }
 
 .articles-container p {
-    color: #666;
+    color: var(--secondary-text-color);
     margin: 10px 0;
     line-height: 1.6;
     text-align: left;
 }
 
 .articles-container h2 {
-    color: #007BFF;
+    color: var(--link-color);
     margin-top: 20px;
 }
 
-/* Style for pre element */
 pre {
-    background-color: #f4f4f4;
-    color: black;
+    background-color: var(--pre-background-color);
+    color: var(--pre-text-color);
     padding: 15px;
     border-radius: 4px;
     overflow-x: auto;
@@ -201,17 +213,15 @@ pre {
     text-align: left;
 }
 
-/* Style for code element within pre */
 pre code {
     background-color: transparent;
     padding: 0;
     border-radius: 0;
     display: block;
     white-space: pre-wrap;
-    color: black;
+    color: var(--pre-text-color);
 }
 
-/* Specific styles for sections */
 .articles-container section {
     margin-bottom: 20px;
 }
@@ -224,11 +234,6 @@ pre code {
     margin-bottom: 10px;
 }
 
-
-
-
-
-/* Media query for mobile devices */
 @media (max-width: 600px) {
     body {
         padding-top: 20px;
