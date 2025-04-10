@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Maps</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="nav-header">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="functions.html" class="nav-link">Functions</a></li>
+                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
+                <li><a href="maps.html" class="nav-link">Maps</a></li>
+                <li><a href="objects.html" class="nav-link">Objects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="articles-container">
+        <h1>Maps</h1>
+        <p>Maps are a useful data structure in JavaScript that allow you to store key-value pairs and remember the original insertion order of the keys.</p>
+
+        <section id="map-declaration">
+            <h2>1. Map Declaration</h2>
+            <p>A Map can be declared using the `new Map()` constructor.</p>
+            <pre><code class="javascript">
+const map = new Map();
+
+// Adding key-value pairs
+map.set('name', 'Alice');
+map.set('age', 25);
+
+// Accessing values
+console.log(map.get('name')); // Output: Alice
+            </code></pre>
+        </section>
+
+        <section id="map-methods">
+            <h2>2. Map Methods</h2>
+            <p>Maps come with various built-in methods to manipulate and access their elements.</p>
+            <pre><code class="javascript">
+const map = new Map();
+map.set('name', 'Alice');
+map.set('age', 25);
+
+// Checking if a key exists
+console.log(map.has('name')); // Output: true
+
+// Removing a key-value pair
+map.delete('age');
+console.log(map.has('age')); // Output: false
+
+// Getting the size of the map
+console.log(map.size); // Output: 1
+            </code></pre>
+        </section>
+
+        <section id="map-iteration">
+            <h2>3. Map Iteration</h2>
+            <p>You can iterate over map elements using loops such as `for...of` and `forEach`.</p>
+            <pre><code class="javascript">
+const map = new Map();
+map.set('name', 'Alice');
+map.set('age', 25);
+
+// Using for...of loop
+for (let [key, value] of map) {
+    console.log(key + ': ' + value);
+}
+
+// Using forEach
+map.forEach((value, key) => {
+    console.log(key + ': ' + value);
+});
+            </code></pre>
+        </section>
+
+        <section id="map-keys-values-entries">
+            <h2>4. Map Keys, Values, and Entries</h2>
+            <p>Maps provide methods to retrieve keys, values, and entries.</p>
+            <pre><code class="javascript">
+const map = new Map();
+map.set('name', 'Alice');
+map.set('age', 25);
+
+// Getting keys
+for (let key of map.keys()) {
+    console.log(key);
+}
+
+// Getting values
+for (let value of map.values()) {
+    console.log(value);
+}
+
+// Getting entries
+for (let [key, value] of map.entries()) {
+    console.log(key + ': ' + value);
+}
+            </code></pre>
+        </section>
+
+        <section id="map-vs-object">
+            <h2>5. Map vs Object</h2>
+            <p>Maps and objects are both used to store key-value pairs, but they have some differences.</p>
+            <pre><code class="javascript">
+// Creating a Map
+const map = new Map();
+map.set('name', 'Alice');
+map.set('age', 25);
+
+// Creating an Object
+const obj = {
+    name: 'Alice',
+    age: 25
+};
+
+// Map allows keys of any type
+map.set(1, 'one');
+console.log(map.get(1)); // Output: one
+
+// Object keys are always strings
+obj[1] = 'one';
+console.log(obj[1]); // Output: one (as a string)
+            </code></pre>
+        </section>
+
+        <p>These are some basic concepts of working with maps in JavaScript. Practice is key to becoming proficient with them!</p>
+
+        <button class="nav-button" onclick="window.location.href='../index.html'">Go Home</button>
+    </article>
+</body>
+
+</html>

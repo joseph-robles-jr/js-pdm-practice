@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header class="nav-header">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="functions.html" class="nav-link">Functions</a></li>
+                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
+                <li><a href="maps.html" class="nav-link">Maps</a></li>
+                <li><a href="objects.html" class="nav-link">Objects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="articles-container">
+        <h1>Arrays</h1>
+        <p>Arrays are a fundamental part of JavaScript, allowing you to store multiple values in a single variable.</p>
+
+        <section id="array-declaration">
+            <h2>1. Array Declaration</h2>
+            <p>An array can be declared using square brackets, and values can be added inside the brackets.</p>
+            <pre><code class="javascript">
+    const fruits = ["Apple", "Banana", "Cherry"];
+    
+    // Accessing elements
+    console.log(fruits[0]); // Output: Apple
+                </code></pre>
+        </section>
+
+        <section id="array-methods">
+            <h2>2. Array Methods</h2>
+            <p>JavaScript arrays come with various built-in methods to manipulate and access their elements.</p>
+            <pre><code class="javascript">
+    const fruits = ["Apple", "Banana", "Cherry"];
+    
+    // Adding an element
+    fruits.push("Date");
+    console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Date"]
+    
+    // Removing the last element
+    fruits.pop();
+    console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]
+                </code></pre>
+        </section>
+
+        <section id="array-iteration">
+            <h2>3. Array Iteration</h2>
+            <p>You can iterate over array elements using loops such as `for`, `forEach`, and `map`.</p>
+            <pre><code class="javascript">
+    const fruits = ["Apple", "Banana", "Cherry"];
+    
+    // Using a for loop
+    for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+    }
+    
+    // Using forEach
+    fruits.forEach(fruit => console.log(fruit));
+    
+    // Using map
+    const upperCaseFruits = fruits.map(fruit => fruit.toUpperCase());
+    console.log(upperCaseFruits); // Output: ["APPLE", "BANANA", "CHERRY"]
+                </code></pre>
+        </section>
+
+        <section id="array-filter">
+            <h2>4. Array Filter</h2>
+            <p>The `filter` method creates a new array with all elements that pass the test implemented by the provided
+                function.</p>
+            <pre><code class="javascript">
+    const numbers = [1, 2, 3, 4, 5];
+    
+    // Filtering even numbers
+    const evenNumbers = numbers.filter(number => number % 2 === 0);
+    console.log(evenNumbers); // Output: [2, 4]
+                </code></pre>
+        </section>
+
+        <section id="array-reduce">
+            <h2>5. Array Reduce</h2>
+            <p>The `reduce` method executes a reducer function on each element of the array, resulting in a single
+                output
+                value.</p>
+            <pre><code class="javascript">
+    const numbers = [1, 2, 3, 4, 5];
+    
+    // Summing all numbers
+    const sum = numbers.reduce((total, number) => total + number, 0);
+    console.log(sum); // Output: 15
+                </code></pre>
+        </section>
+
+        <section id="array-find">
+            <h2>6. Array Find</h2>
+            <p>The `find` method returns the value of the first element in the array that satisfies the provided testing
+                function.</p>
+            <pre><code class="javascript">
+    const numbers = [1, 2, 3, 4, 5];
+    
+    // Finding the first number greater than 3
+    const foundNumber = numbers.find(number => number > 3);
+    console.log(foundNumber); // Output: 4
+                </code></pre>
+        </section>
+
+        <p>These are some basic concepts of working with arrays in JavaScript. Practice is key to becoming proficient
+            with
+            them!</p>
+
+        <button class="nav-button" onclick="window.location.href='../index.html'">Go Home</button>
+    </article>
+
+</body>
+
+</html>
