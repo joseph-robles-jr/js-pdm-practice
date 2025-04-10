@@ -1,52 +1,48 @@
-let hello = false; //This is a boolian (True or False value). Here, we set it to equal "false".
+// This is a boolean (True or False value). Here, we set it to equal "false".
+let hello = false;
 
-let waesaw
-function evalHello(){
-let evalHelloResults = (hello ? 'Hello, Frind!' : 'Go Away! I do not know you!');
-// Here we check the value of "hello". The "?" is the ternary operator. 
-// The ternary operator allows us to specify a response value based on if "hello" is "True" or "False".
-// The first value after the "?" is what we do if "hello" evaluates to "true".
-// The second value "Go Away! I do not know you!" will be the response if "hello" evaluates to "true".
-
-
-console.log(evalHelloResults); // Now we print the response to the console. 
+// Function to evaluate the value of "hello" and print the appropriate response
+function evalHello() {
+    // The ternary operator allows us to specify a response value based on if "hello" is "True" or "False".
+    let evalHelloResults = hello ? 'Hello, Friend!' : 'Go Away! I do not know you!';
+    console.log(evalHelloResults); // Print the response to the console
 }
 
-
+// Function to check for null values and provide a default response
 function NullCheck() {
-
-let userInput; //Is a null value.  
-
-// Null coalescing operator - a backup if a value is empty 
-let userOutput = userInput ?? "Unknown User";  // Uses "Unknown Wanderer" if adventurerInput is null
-console.log("Input: " + userInput + "\nOutput: " + userOutput);
+    let userInput; // Is a null value
+    // Null coalescing operator - a backup if a value is empty
+    let userOutput = userInput ?? "Unknown User"; // Uses "Unknown User" if userInput is null
+    console.log("Input: " + userInput + "\nOutput: " + userOutput);
 }
 
+// Function to check if a property exists using optional chaining
 function checkIfExists() {
-    // Optional chaining
-    
-    let hello = {"world" : ["This is value Zero", "This is value One", "This is value Two"]}
-
-    
-
-let helloExists = hello?.world?.firstElement;  // Won't crash if dragon or vulnerabilities doesn't exist
-
-console.log(helloExists);
+    let hello = {
+        "world": ["This is value Zero", "This is value One", "This is value Two"]
+    };
+    let helloExists = hello?.world?.firstElement; // Won't crash if hello or world doesn't exist
+    console.log(helloExists);
 }
 
+// Print a blank line
+console.log('\n');
 
+// Evaluate "hello" with its initial value (false)
+evalHello();
 
-console.log(`\n`) //This prints a blank line
+// Print a blank line
+console.log('\n');
 
-evalHello(); // we set the hello variable to "false" at the start of the program. This causes the false option to print.
+// Evaluate "hello" with its value set to true
+hello = true;
+evalHello();
 
-console.log(`\n`)
+// Print a blank line
+console.log('\n');
 
-evalHello(hello=true); // we now set the value to "true". This causes the true option (option 2) to print.
-
-
-console.log(`\n`)//This prints a blank line
-
+// Perform null check
 NullCheck();
 
+// Check if property exists
 checkIfExists();
